@@ -1,0 +1,93 @@
+.page-content
+	display: none
+	&__title
+		font-size: 20px
+		margin-bottom: 20px
+	&.active
+		display: block
+
+// Devices
+
+.create-form
+	&__field
+		margin-bottom: 15px
+	&__btn
+		text-align: center
+
+.admin-devices__items-top, .admin-device
+	display: grid
+	grid-template-columns: 30px 75px 450px 120px repeat(3, 1fr)
+	align-items: center
+	justify-items: center
+	border-bottom: $border
+	padding: 5px
+
+.admin-devices__items-top
+	font-weight: bold
+
+.admin-device
+	&__img
+		width: 30px
+		height: 30px
+		object-fit: contain
+	&__name
+		justify-self: flex-start
+	.star
+		width: 10px
+		height: 10px
+
+.admin-types__items-top, .admin-brands__items-top, .admin-brand, .admin-type
+	display: grid
+	grid-template-columns: 30px repeat(3, 1fr)
+	justify-items: center
+	align-items: center
+	padding: 5px
+	border-bottom: $border
+
+.admin-types__items-top, .admin-brands__items-top
+	font-weight: bold
+
+.admin-users__items-top, .admin-user
+	display: grid
+	grid-template-columns: 30px 50px 100px 100px 100px 100px repeat(3, 1fr)
+	align-items: center
+	justify-items: center
+	padding: 5px
+	border-bottom: $border
+
+.admin-users__items-top
+	font-weight: bold
+
+.orders__items-top, .order
+	padding: 5px
+	border-bottom: $border
+	display: grid
+	grid-template-columns: 30px 200px 1fr 100px
+
+.orders__items-top
+	font-weight: bold
+	.spec
+		justify-self: center
+
+.order
+	&__top
+		margin-bottom: 30px
+	&__btn
+		justify-self: center
+	&__value-list
+		@include flex(flex-start)
+		&__item
+			margin: 0 10px
+
+.file-upload
+	display: inline-block
+	margin-bottom: 15px
+	position: relative
+	&__img
+		position: absolute
+		left: 160px
+		top: 20px
+		width: 250px
+		transform: translateY(-50%)
+		z-index: -1
+		pointer-events: none

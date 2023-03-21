@@ -1,0 +1,104 @@
+.device
+	padding-bottom: 40px
+	&__buttons
+		@include flex(space-between)
+	&__catalog-btn
+		display: none
+	&__title
+		margin: 15px 0
+	&__rating
+		@include flex(flex-start)
+		&-star:not(:first-child)
+			margin-left: 5px
+	&__main
+		margin-top: 20px
+		padding-top: 20px
+		border-top: $border
+		display: unset
+		@include flex(space-between, flex-start)
+	&__slider
+		width: 50%
+		position: sticky
+		top: 90px
+		.device-image
+			object-fit: contain
+	&__info
+		width: 50%
+		min-height: 505px
+		padding-left: 40px
+		font-size: 16px
+		line-height: 32px
+		@include flex(space-between, normal)
+		flex-direction: column
+	&__desc
+		&-item
+			@include flex(space-between)
+		&-prop
+			padding-right: 15px
+		&-value
+			word-break: break-word
+			color: $blue
+			text-align: end
+	&__bottom
+		@include flex(space-between, flex-end)
+	&__buy-btn svg
+		fill: $white
+		transition: $transition
+	&__buy-btn:hover svg
+		fill: $black
+	&__buy-count
+		margin-left: 10px
+
+	&-carriage
+		position: fixed
+		bottom: -1px
+		right: 0
+		left: 0
+		padding: 12px
+		z-index: 998
+		box-shadow: 0 -2px 8px $gray
+		background-color: $white
+		color: $black
+		transform: translateY(100%)
+		transition: $transition
+		&__inner
+			@include flex(space-between)
+		&__price
+			@include flex()
+			.price
+				font-size: 24px
+				margin-right: 20px
+				&-none
+					display: none
+				&.with-discount
+					color: $red
+		&.active
+			transform: translateY(0)
+
+	@include desktop-sm
+		&__catalog-btn
+			display: flex
+		&__info
+			padding-left: 20px
+
+	@include table
+		padding-bottom: 20px
+		&__main
+			flex-direction: column
+		&__slider
+			width: 100%
+			position: static
+		&__info
+			width: 100%
+			padding-top: 20px
+			padding-left: 0
+			min-height: auto
+		&__bottom
+			padding-top: 20px
+		&-carriage
+			padding: 8px
+			&__title
+				display: none
+			&__price
+				width: 100%
+				justify-content: space-between

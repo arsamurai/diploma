@@ -1,0 +1,52 @@
+.slider
+	width: 100%
+
+	.swiper-button-prev,
+	.swiper-button-next
+		color: rgba($black, .6)
+		transition: $transition
+		&:after
+			font-size: 25px
+		&:hover
+			color: rgba($black, 1)
+
+	&.device-slider
+		.device-slider__top
+			margin-bottom: 10px
+			.swiper-wrapper, .swiper, .swiper-slide, img
+				width: 100%
+				height: 100%
+				min-height: 350px
+				max-height: 443px
+		.device-slider__bottom
+			.swiper-wrapper, .swiper, .swiper-slide, img
+				width: 100%
+				height: 60px
+			.swiper-slide
+				cursor: pointer
+			img
+				padding: 0 2px
+			.swiper-button-prev:after,
+			.swiper-button-next:after
+				font-size: 15px
+
+	&.main-slider
+		.swiper-wrapper, .swiper, .swiper-slide, img
+			height: 335px
+			width: 100%
+		@include desktop-sm
+			.swiper-wrapper, .swiper, .swiper-slide, img
+				height: 275px
+		@include phone
+			.swiper-wrapper, .swiper, .swiper-slide, img
+				height: 235px
+
+	@include phone
+		.swiper-button-prev,
+		.swiper-button-next
+			display: none
+		&.device-slider
+			.device-slider__top
+				margin-bottom: 10px
+				.swiper-wrapper, .swiper, .swiper-slide, img
+					max-height: 343px

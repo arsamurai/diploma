@@ -1,0 +1,27 @@
+.devices-page
+	&__buttons
+		@include flex(space-between)
+	&__catalog-btn
+			display: none
+	&__title
+		margin: 20px 0 30px
+	&__filters
+		@include flex(space-between)
+
+	@media screen and (max-width: 375px)
+		&__title
+			margin: 15px 0 25px
+
+		&__filters
+			flex-direction: column
+			align-items: flex-start
+		.sort-list
+			margin-bottom: 15px
+			
+		.brands-list .sort__popup
+			right: auto
+			left: 0
+
+	@include desktop-sm
+		&__catalog-btn
+			display: flex

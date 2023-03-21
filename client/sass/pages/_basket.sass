@@ -1,0 +1,33 @@
+.basket
+	padding: 20px 0
+	&__title
+		margin-bottom: 40px
+	&__step:not(:last-child)
+		margin-bottom: 30px
+		padding-bottom: 30px
+		border-bottom: 1px dashed $gray
+	&__step-title
+		font-size: 16px
+	&__contacts-title,
+	&__delivery-title
+		margin-bottom: 24px
+
+	@include phone
+		&__title
+			margin-bottom: 30px
+		&__step:not(:last-child)
+			margin-bottom: 20px
+			padding-bottom: 20px
+
+.add-device-modal
+	padding-top: 16px
+	@include flex(space-between)
+		
+	@include table
+		padding-top: 10px
+
+	@include phone
+		flex-direction: column
+		justify-content: center
+		button:first-child
+			margin-bottom: 10px

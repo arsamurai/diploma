@@ -1,0 +1,62 @@
+.modal
+	height: 100%
+	width: 100%
+	position: fixed
+	z-index: 1001
+	top: 0
+	left: 0
+	background-color: rgba(#000, 0.4)
+	backdrop-filter: blur(2px)
+	display: flex
+	justify-content: center
+	align-items: center
+	pointer-events: none
+	opacity: 0
+	transition: $transition
+	padding: 15px
+	&.active
+		opacity: 1
+		pointer-events: all
+	&__content
+		max-width: 960px
+		width: 100%
+		transform: scale(0.5)
+		transition: $transition
+		position: relative
+		background-color: $white
+		border-radius: 10px
+	&__content.active
+		transform: scale(1)
+	&__header
+		height: 57px
+		padding: 0 16px
+		border-bottom: $border
+		@include flex(space-between)
+	&__title
+		font-size: 24px
+		white-space: nowrap
+		text-overflow: ellipsis
+	&__close
+		font-size: 25px
+		font-weight: 700
+		cursor: pointer
+		opacity: 0.6
+		transition: $transition
+		span
+			color: $black
+	&__close:hover
+		opacity: 1
+	&__body
+		padding: 0 16px 16px
+		box-sizing: border-box
+		overflow-y: auto
+
+	@include table
+		&__title
+			font-size: 20px
+		&__body
+			padding: 0 10px 10px
+
+	@include phone
+		&__content
+			max-width: 100%

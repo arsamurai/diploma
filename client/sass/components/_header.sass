@@ -1,0 +1,54 @@
+.header
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	z-index: 999
+	background-color: $violet
+	&__inner
+		padding: 10px 0
+		@include flex(space-between)
+	&__left
+		@include flex()
+	&__logo
+		min-width: 50px
+		height: 50px
+		&-img
+			width: 50px
+			height: 50px
+	&__catalog
+		margin-left: 20px
+		&-btn
+			width: 125px
+	&__settings
+		@include flex()
+	&__basket
+		width: 30px
+		height: 30px
+		margin-right: 20px
+		img
+			width: 100%
+			height: 100%
+	&__admin-link
+		margin-left: 20px
+	&__account-btn
+		width: 25px
+		height: 25px
+		svg
+			width: 25px
+			height: 25px
+
+	@include desktop-sm
+		&__catalog
+			display: none
+
+	@include table
+		&__basket
+			margin-right: 10px
+		.languages, &__admin-link
+			display: none
+	@include phone
+		&__account-link
+			display: none
+		&__basket
+			margin-right: 0

@@ -1,0 +1,13 @@
+.main
+	position: relative
+	@include flex(flex-end, flex-start)
+	&__body
+		padding-left: 40px
+		width: calc(100% - 250px)
+		border-left: $border
+
+	@include desktop-sm
+		&__body
+			width: 100%
+			border-left: 0
+			padding-left: 0

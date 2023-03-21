@@ -1,0 +1,30 @@
+/* flex settings */
+@mixin flex($jc:center, $ai:center)
+	display: flex
+	justify-content: $jc
+	align-items: $ai
+
+%flexColumn
+	display: flex
+	flex-direction: column
+
+/* media query settings */
+@mixin lg-desktop
+	@media screen and (max-width: $xxl-max)
+		@content
+
+@mixin desktop
+	@media screen and (max-width: $xl-max)
+		@content
+
+@mixin desktop-sm
+	@media screen and (max-width: $lg-max)
+		@content
+
+@mixin table
+	@media screen and (max-width: $md-max)
+		@content
+
+@mixin phone
+	@media screen and (max-width: $sm-max)
+		@content

@@ -1,0 +1,71 @@
+.main-catalog
+	&__wrapper
+		max-width: 250px
+		width: 100%
+		height: 100%
+	&__list
+		&-link
+			width: fit-content
+			display: flex
+			align-items: center
+		&-item:not(:first-child)
+			margin-top: 20px
+		&-link img
+			width: 20px
+			height: 20px
+			margin-right: 15px
+	&__btn
+		width: 100%
+		margin-top: 30px
+		background-color: $white
+		color: $black
+		justify-content: center
+		align-items: center
+		display: none
+		span
+			margin-left: 10px
+	&--mobile
+		display: none
+
+	@include desktop-sm
+		&--desktop
+			display: none
+		&--mobile
+			display: block
+		&__wrapper
+			max-width: 100%
+		&__list
+			display: grid
+			grid-template-columns: repeat(3, 1fr)
+			margin-top: 30px
+			&-item
+				margin-top: 20px
+
+	@media screen and (max-width: 650px)
+		&--mobile
+			display: none
+		&__btn
+			display: flex
+
+.catalog
+	&__list
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		&-link
+			width: fit-content
+			display: flex
+			align-items: center
+		&-item
+			margin-top: 16px
+		&-link img
+			width: 20px
+			height: 20px
+			margin-right: 15px
+
+	@include table
+		&__list
+			grid-template-columns: repeat(2, 1fr)
+
+	@include phone
+		&__list
+			grid-template-columns: 1fr

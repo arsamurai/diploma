@@ -1,0 +1,35 @@
+.recommendations
+	margin: 50px 0
+	&__title
+		font-size: 24px
+		margin-bottom: 20px
+	&__body
+		position: relative
+		&::before, &::after
+			content: ""
+			position: absolute
+			top: 0
+			z-index: 997
+			width: 20px
+			height: 100%
+		&::before
+			right: -1px
+			box-shadow: inset -10px 0px 8px $white
+		&::after
+			left: -1px
+			box-shadow: inset 10px 0px 8px $white
+	.swiper-button-prev,
+	.swiper-button-next
+		color: rgba($black, .6)
+		transition: $transition
+		&:after
+			font-size: 25px
+		&:hover
+			color: rgba($black, 1)
+	.main-device-item
+		width: 100%
+		&__title
+			height: 50px
+
+	@include table
+		margin: 20px 0

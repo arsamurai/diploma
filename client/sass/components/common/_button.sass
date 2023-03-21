@@ -1,0 +1,44 @@
+.button
+	font-size: 16px
+	height: 40px
+	padding-left: 16px
+	padding-right: 16px
+	position: relative
+	border-radius: 10px
+	outline: none
+	transition: $transition
+	background-color: $black
+	color: $white
+	border: $border
+	@include flex()
+	span
+		margin-left: 10px
+	&:hover
+		background-color: $white
+		border-color: $black
+		color: $black
+	&--simplified
+		border: 0
+		color: $blue
+		background-color: transparent
+		padding: 0
+		height: auto
+		&:hover
+			color: $red
+	&--outlined
+		background-color: $white
+		color: $black
+	&--violet
+		color: $black
+		background-color: rgba($violet, .3) !important
+		border-color: transparent
+		&:hover
+			border-color: $violet
+	&--error
+		background-color: $red
+		&:hover
+			background-color: lighten($red, 5%)
+	&--disabled
+		background-color: #eee
+		color: $gray
+		pointer-events: none

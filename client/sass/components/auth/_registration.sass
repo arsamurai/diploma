@@ -1,0 +1,35 @@
+.registration
+	max-width: 990px
+	width: 100%
+	margin: 0 auto
+	&__title
+		margin-bottom: 30px
+		text-align: center
+	&-form__block
+		margin-bottom: 30px
+	&-form__subtitle
+		font-size: 18px
+		margin-bottom: 10px
+	&-form__fields
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		gap: 15px
+	&-form__btn
+		text-align: -webkit-center
+		button
+			width: 50%
+
+	@include desktop-sm
+		padding: 10px 0 20px
+
+	@include table
+		&-form__fields
+			grid-template-columns: repeat(2, 1fr)
+
+	@include phone
+		&__title
+			margin-bottom: 20px
+		&-form__fields
+			grid-template-columns: 1fr
+		&-form__btn button
+			width: 80%

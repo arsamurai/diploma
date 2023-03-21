@@ -1,0 +1,45 @@
+.comments
+	padding-top: 50px
+	&__top
+		@include flex(space-between)
+		padding: 15px
+		border: $border
+		margin-bottom: 15px
+		font-size: 20px
+
+.comment
+	padding: 15px
+	border: $border
+	margin-bottom: 15px
+	&__author, &__block-title
+		font-size: 16px
+		font-weight: bold
+		margin-bottom: 10px
+	&__stars, &__text, &__block
+		margin-bottom: 15px
+
+.comments-form
+	padding-top: 16px
+	&__row:not(:last-child)
+		margin-bottom: 15px
+	.rating 
+		.react-stars
+			margin-left: 13px
+			width: 250px
+			@include flex(space-between)
+		span
+			margin-right: 0
+	.labels
+		@include flex(flex-start)
+		&__label
+			color: $gray
+			font-size: 12px
+			margin-right: 10px
+	&__btns
+		padding-top: 20px
+		@include flex(space-between)
+
+
+@include phone
+	.comments__top, .comment
+		padding: 10px

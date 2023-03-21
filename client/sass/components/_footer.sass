@@ -1,0 +1,17 @@
+.footer
+	background-color: $violet
+	color: $black
+	a
+		color: $black
+	&__inner
+		padding: 10px 0
+		@include flex(space-between)
+
+	&--device
+		padding-bottom: 70px
+
+	@include phone
+		&__inner
+			flex-direction: column
+		.text
+			margin-bottom: 20px

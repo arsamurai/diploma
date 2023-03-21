@@ -1,0 +1,152 @@
+.account
+	&__preview
+		padding: 24px
+		text-align: center
+		&-img
+			width: 200px
+			height: 200px
+			border-radius: 50%
+		&-login
+			margin: 15px 0
+			font-size: 24px
+			font-weight: bold
+			font-style: italic
+		.account__settings-btns
+			display: none
+	&__block
+		margin-bottom: 10px
+		border: $border
+		border-radius: 10px
+		&-header
+			padding: 24px
+			@include flex(flex-start)
+			.block-header__img
+				height: 24px
+				width: 24px
+				margin-right: 24px
+			.block-header__title
+				font-size: 18px
+		&-items
+			padding-left: 72px
+			padding-right: 24px
+			display: grid
+			grid-template-columns: repeat(3, 1fr)
+			gap: 24px
+		&-item
+			margin-bottom: 24px
+			&__label
+				font-size: 12px
+				color: $gray
+			&__text
+				margin-top: 8px
+			&__input
+				margin-top: 8px
+				display: none
+		&.edit
+			.account__block-item__text
+				display: none
+			.account__block-item__input
+				display: block
+	&__history
+		border: $border
+		border-radius: 10px
+		margin-bottom: 30px
+		&-header
+			padding: 24px
+			@include flex(flex-start)
+			.history-header__img
+				height: 24px
+				width: 24px
+				margin-right: 24px
+			.history-header__title
+				font-size: 18px
+		&-body
+			padding-left: 72px
+			padding-right: 24px
+			padding-bottom: 24px
+			grid-template-columns: repeat(3,1fr)
+		.history-body__item
+			margin-bottom: 10px
+	&__settings-btns
+		padding-left: 72px
+		padding-bottom: 24px
+		@include flex(flex-start)
+		.save
+			margin-right: 16px
+		.button
+			display: none
+		.active
+			display: block
+	&__btns
+		padding-bottom: 10px
+		@include flex(space-between)
+		button
+			font-size: 14px
+
+	@include table
+		&__preview
+			padding: 18px
+			&-img
+				width: 150px
+				height: 150px
+			&-login
+				margin: 10px 0
+		&__block
+			&-header
+				padding: 18px
+				.block-header__img
+					margin-right: 18px
+			&-items
+				padding-left: 60px
+				padding-right: 18px
+				grid-template-columns: repeat(2, 1fr)
+				gap: 18px
+			&-item
+				margin-bottom: 0
+			&-item:last-child
+				margin-bottom: 18px
+		&__history
+			margin-bottom: 30px
+			&-header
+				padding: 18px
+				.history-header__img
+					margin-right: 18px
+			&-body
+				padding-left: 60px
+		&__settings-btns
+			padding-left: 60px
+			padding-bottom: 18px
+
+	@include phone
+		&__preview
+			padding: 14px
+			&-img
+				width: 150px
+				height: 150px
+			&-login
+				margin: 10px 0
+		&__block
+			&-header
+				padding: 14px
+				.block-header__img
+					margin-right: 14px
+			&-items
+				padding-left: 52px
+				padding-right: 14px
+				grid-template-columns: 1fr
+				gap: 14px
+			&-item
+				margin-bottom: 0
+			&-item:last-child
+				margin-bottom: 14px
+		&__history
+			margin-bottom: 30px
+			&-header
+				padding: 14px
+				.history-header__img
+					margin-right: 14px
+			&-body
+				padding-left: 52px
+		&__settings-btns
+			padding-left: 52px
+			padding-bottom: 14px

@@ -1,0 +1,17 @@
+.admin
+	.wrapper
+		padding: 20px 0
+	&__title
+		margin-bottom: 20px
+		text-align: end
+	&__pages
+		@include flex(space-between, flex-start)
+		&-titles
+			padding-right: 20px
+			max-width: 250px
+			width: 100%
+		&-content
+			padding-left: 20px
+			padding-bottom: 20px
+			border-left: $border
+			width: calc(100% - 250px)

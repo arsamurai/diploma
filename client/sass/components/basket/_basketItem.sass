@@ -1,0 +1,48 @@
+.basket__item
+	padding: 16px 0
+	border-bottom: $border
+	&-top
+		@include flex(space-between)
+	&-img
+		margin-right: 20px
+		position: relative
+		@include flex(center,flex-end)
+		img
+			width: 80px
+			height: 80px
+			margin-top: 16px
+			object-fit: contain
+		p
+			left: -7px
+	&-title
+		width: calc(100% - 140px)
+	&-remove
+		font-size: 25px
+		font-weight: 700
+		cursor: pointer
+		padding: 0 12px
+		opacity: 0.6
+		transition: $transition
+		span
+			color: $black
+	&-remove:hover
+		opacity: 1
+	&-bottom
+		@include flex(space-between)
+	&-count
+		@include flex()
+		margin-left: 40px
+		transform: translateX(-50%)
+		.count
+			margin: 0 8px
+		button svg
+			fill: rgba($black, .6)
+			transition: $transition
+		button:hover svg
+			fill: rgba($black, 1)
+	&-price
+		margin-right: 12px
+		font-size: 20px
+		.old-price
+			left: auto
+			right: 0

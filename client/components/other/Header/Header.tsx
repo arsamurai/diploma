@@ -22,7 +22,7 @@ const Header: React.FC = () => {
 
 	useEffect(() => {
 		auth();
-	}, [])
+	})
 
 	const { isAuth, user } = useTypedSelector(state => state.user);
 

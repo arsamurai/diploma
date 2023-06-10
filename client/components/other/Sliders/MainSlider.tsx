@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import image from "../../../assets/images/default.jpeg";
+import slider_1 from "../../../assets/images/main-slider/slider_1.jpeg";
+import slider_2 from "../../../assets/images/main-slider/slider_2.jpeg";
+import slider_3 from "../../../assets/images/main-slider/slider_3.jpeg";
 
 // Import Swiper settings
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -30,13 +32,13 @@ const MainSlider: React.FC<MainSliderProps> = ({}) => {
         // }}
       >
         <SwiperSlide>
-          <Image src={image} alt="image" className="image" />
+          <Image src={slider_1} alt="image" className="image" />
         </SwiperSlide>
         <SwiperSlide>
-          <Image src={image} alt="image" className="image" />
+          <Image src={slider_2} alt="image" className="image" />
         </SwiperSlide>
         <SwiperSlide>
-          <Image src={image} alt="image" className="image" />
+          <Image src={slider_3} alt="image" className="image" />
         </SwiperSlide>
       </Swiper>
     </div>

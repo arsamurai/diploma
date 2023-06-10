@@ -23,10 +23,10 @@ serverWithHighRite,
 serverWithDisocunt,
 }) => {
   const [activeCatalog, setActiveCatalog] = useState(false);
-  const [withType, setWithType] = useState<IDevice[]>(serverWithType);
-  const [withBrand, setWithBrand] = useState<IDevice[]>(serverWithBrand);
-  const [withHighRite, setWithHighRite] = useState<IDevice[]>(serverWithHighRite);
-  const [withDisocunt, setWithDisocunt] =
+  const [withType] = useState<IDevice[]>(serverWithType);
+  const [withBrand] = useState<IDevice[]>(serverWithBrand);
+  const [withHighRite] = useState<IDevice[]>(serverWithHighRite);
+  const [withDisocunt] =
     useState<IDevice[]>(serverWithDisocunt);
 
   const catalogHandler = () => {

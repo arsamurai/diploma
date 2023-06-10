@@ -1,7 +1,4 @@
-import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
-import image from "../../assets/images/default.jpeg";
-import cn from "classnames";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import { useTypedSelector } from "../../hooks/useTypedSelector";
 import { useActions } from "../../hooks/useAction";
@@ -18,12 +15,12 @@ const MainСatalog: React.FC = () => {
     <div className="main-catalog">
       <div className="main-catalog__inner">
         <ul className="main-catalog__list">
-          {types.map((type) => {
+          {types.map((type, index) => {
             return (
               <li key={type.name} className="main-catalog__list-item">
                 <Link href={"/" + type.value} className="main-catalog__list-link">
-                  <Image src={image} alt="link" />
-                  <span>{type.name}</span>
+                  <span className="main-catalog__item-num">{index + 1})</span>
+                  <span className="main-catalog__item-name">{type.name}</span>
                 </Link>
               </li>
             );

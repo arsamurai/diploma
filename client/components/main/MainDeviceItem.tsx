@@ -21,7 +21,7 @@ const MainDeviceItem: React.FC<MainDeviceItemProps> = ({ device }) => {
       id="main-device-item"
     >
       <div className="main-device-item__img">
-        <img src={process.env.NEXT_PUBLIC_API_URL + imgPath} alt="device__img" />
+        <img src={process.env.NEXT_PUBLIC_API_URL+ imgPath} alt="device__img" />
       </div>
       <h5 className="main-device-item__title">{maxStrokeLength(name, 40)}</h5>
       <div className="main-device-item__bottom">

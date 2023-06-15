@@ -27,9 +27,9 @@ const FileUpload: React.FC<FileUploadProps> = ({
         onChange={onChange}
       />
       {children}
-			{file && <div className="file-upload__img">
+			{/* {file && <div className="file-upload__img">
 				{file.name}
-			</div>}
+			</div>} */}
     </div>
   );
 };

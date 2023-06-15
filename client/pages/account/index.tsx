@@ -114,7 +114,7 @@ const Account: React.FC = () => {
 								/>
 							</li>
 							<li className="account__block-item">
-								<label className="account__block-item__label">Ім'я</label>
+								<label className="account__block-item__label">Імʼя</label>
 								<p className="account__block-item__text">{user.name}</p>
 								<Input
 									name="name"

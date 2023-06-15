@@ -26,10 +26,10 @@ const MainSlider: React.FC<MainSliderProps> = ({}) => {
         scrollbar={{ draggable: true }}
         effect={"fade"}
         navigation
-        // autoplay={{
-        //   delay: 11000,
-        //   disableOnInteraction: true,
-        // }}
+        autoplay={{
+          delay: 11000,
+          disableOnInteraction: true,
+        }}
       >
         <SwiperSlide>
           <Image src={slider_1} alt="image" className="image" />

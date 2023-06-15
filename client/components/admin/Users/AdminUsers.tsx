@@ -28,7 +28,7 @@ const AdminUsers: React.FC<AdminUsersProps> = ({ index, activePage }) => {
           <div>№</div>
           <div>Фото</div>
           <div>Логін</div>
-          <div>Ім'я</div>
+          <div>Імя</div>
           <div>Фамілія</div>
           <div>По батькові</div>
           <div>Почта</div>

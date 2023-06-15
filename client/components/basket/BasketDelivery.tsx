@@ -8,7 +8,7 @@ interface BasketDeliveryProps {
 }
 const BasketDelivery: React.FC<BasketDeliveryProps> = ({setDelivery}) => {
   const onFormChange = () => {
-    //setDelivery([])
+    setDelivery([])
   };
 
   const formRef: any = useRef();

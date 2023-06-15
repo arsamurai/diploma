@@ -1,13 +1,12 @@
 import React, { RefObject, useRef, useState } from "react";
 import cn from "classnames";
-import { ISortItem } from "../../device/SortList";
 import { IBrand } from "../../../models/IBrand";
 
 interface SortPopupProps {
 	title: string,
 	activeItem: string,
   onSelectSortBy: (object: object) => void,
-	sortItems: ISortItem[] | IBrand[],
+	sortItems: IBrand[] | IBrand[],
 	sortRef: RefObject<any>,
 	className: string
 }

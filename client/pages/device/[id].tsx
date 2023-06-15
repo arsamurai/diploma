@@ -157,7 +157,7 @@ const Device: React.FC = () => {
               )}
               {device.info.сonnection && (
                 <div className="device__desc-item">
-                  <p className="device__desc-prop">З'єднання:</p>
+                  <p className="device__desc-prop">Зєднання:</p>
                   <p className="device__desc-value">{device.info.сonnection}</p>
                 </div>
               )}

@@ -19,14 +19,13 @@ const Header: React.FC = () => {
   const [activeLogin, setActiveLogin] = useState(false);
   const [activeCatalog, setActiveCatalog] = useState(false);
   const [activeSideBar, setActiveSideBar] = useState(false);
+  const { isAuth, user } = useTypedSelector(state => state.user);
+  const isAdmin = !!user?.roles?.find(role => role.value === 'ADMIN');
 
 	useEffect(() => {
 		auth();
-	})
+	}, [user])
 
-	const { isAuth, user } = useTypedSelector(state => state.user);
-
-  const isAdmin = !!user?.roles?.find(role => role.value === 'ADMIN');
 
 	const loginHandler = () => {
     setActiveLogin(true);

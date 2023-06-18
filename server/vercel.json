@@ -2,7 +2,7 @@
 	"version": 2,
 	"env": {
 		"MONGO_URI": "@shop_api_mongo_uri",
-		"PORT": "7000",
+		"PORT": "9000",
 		"JWT_KEY": "SECRET"
 	},
 	"builds": [
